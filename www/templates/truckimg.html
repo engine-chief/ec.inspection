@@ -1,0 +1,396 @@
+<ion-view view-title="Truck Inspection Descriptions">
+  <ion-content class="padding">
+    <style>
+    .container {
+      position: relative;
+      width: 100%;
+      /*Or whatever you want*/
+    }
+    
+    .imageOne {
+      width: 100%;
+    }
+    
+    .imageTwo {
+      position: absolute;
+      width: 20%;
+      top: 78%;
+      left: 86%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .upload-button {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    
+    .ionic_ratings {
+      font-size: 30px;
+      margin-left: 30px;
+    }
+    .ionic_ratings .icon{
+      font-size: 30px;
+      margin-left: 5px;
+    }
+    </style>
+    <p>Documents</p>
+    <div class="list">
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI15}}" src="truckimg/slide15.png">
+            <img class="imageTwo" ng-click="takePicture15()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI16}}" src="truckimg/slide16.png">
+            <img class="imageTwo" ng-click="takePicture16()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <p>RC</p>
+        </div>
+        <div class="col col-50">
+          <p>Permit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI17}}" src="truckimg/slide17.png">
+            <img class="imageTwo" ng-click="takePicture17()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI18}}" src="truckimg/slide18.png">
+            <img class="imageTwo" ng-click="takePicture18()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <p>Insurance</p>
+        </div>
+        <div class="col col-50">
+          <p>Fitness</p>
+        </div>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadDocumentPics()">Upload Pics</button>
+    <p>General Apperances</p>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <textarea ng-model="data.gaDescription" placeholder=""></textarea>
+      </label>
+      <div class="item item-input">
+        General Appearance Rating:
+        <ionic-ratings ratingsobj='gaRatingObject'></ionic-ratings>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container">
+            <img class="imageOne" ng-src="{{imgURI1}}" src="truckimg/slide1.png">
+            <img class="imageTwo" ng-click="takePicture1()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container">
+            <img class="imageOne" ng-src="{{imgURI2}}" src="truckimg/slide2.png">
+            <img class="imageTwo" ng-click="takePicture2()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container">
+            <img class="imageOne" ng-src="{{imgURI3}}" src="truckimg/slide3.png">
+            <img class="imageTwo" ng-click="takePicture3()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container">
+            <img class="imageOne" ng-src="{{imgURI4}}" src="truckimg/slide4.png">
+            <img class="imageTwo" ng-click="takePicture4()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container">
+            <img class="imageOne" ng-src="{{imgURI5}}" src="truckimg/slide5.png">
+            <img class="imageTwo" ng-click="takePicture5()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <label class="item item-input item-stacked-label">
+          <span class="input-label">Original length of chassis</span>
+          <input type="number" id="chlengthinch" name="original_length_of_chassis_ft" ng-model="data.original_length_of_chassis_ft" placeholder="Or. length of chassis(feet)" style="
+     width: 73%;
+     float: left;
+     ">
+          <p style="">feet</p>
+          <input type="number" id="chlengthinch" name="original_length_of_chassis_in" ng-model="data.original_length_of_chassis_in" placeholder="Or. length of chassis(inch)" style="
+     width: 73%;
+     float: left;
+     ">
+          <p style="margin-top:22px">inch</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Oem length of Chassis (if applicable)</span>
+          <input type="number" id="ch_length_ft" name="oem_length_of_chassis_ft" ng-model="data.oem_length_of_chassis_ft" placeholder="Ex. length of Chassis(feet)" style="
+       width: 73%;
+       float: left;
+       ">
+          <p style="">feet</p>
+          <input type="number" id="ch_length_in" name="oem_length_of_chassis_in" ng-model="data.oem_length_of_chassis_in" placeholder="Ex. length of Chassis(inch)" style="
+       width: 73%;
+       float: left;
+       ">
+          <p style="margin-top:22px">inch</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Overall Height</span>
+          <input type="number" id="overallheight" name="overall_height_ft" ng-model="data.overall_height_ft" placeholder="Overall Height(feet)" style="
+         width: 73%;
+         float: left;
+         ">
+          <p style="">feet</p>
+          <input type="number" id="chlengthinch" name="overall_height_in" ng-model="data.overall_height_in" placeholder="Overall Height(inch)" style="
+         width: 73%;
+         float: left;
+         ">
+          <p style="margin-top:22px">inch</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Overall Length</span>
+          <input type="number" id="chlengthinch" name="overall_length_ft" ng-model="data.overall_length_ft" placeholder="Overall Length(feet)" style="
+         width: 73%;
+         float: left;
+         ">
+          <p style="">feet</p>
+          <input type="number" id="chlengthinch" name="overall_length_in" ng-model="data.overall_length_in" placeholder="Overall Length(inch)" style="
+         width: 73%;
+         float: left;
+         ">
+          <p style="margin-top:22px">inch</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Overall Width</span>
+          <input type="number" id="overallwidth" name="overall_width_ft" ng-model="data.overall_width_ft" placeholder="Overall Width(feet)" style="
+         width: 73%;
+         float: left;
+         ">
+          <p style="">feet</p>
+          <input type="number" id="chlengthinch" name="overall_width_in" ng-model="data.overall_width_in" placeholder="Overall Width(inch)" style="
+         width: 73%;
+         float: left;
+         ">
+          <p style="margin-top:22px">inch</p>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Height of Container / Body</span>
+          <input type="number" id="heightcon" name="height_of_container_ft" ng-model="data.height_of_container_ft" placeholder="Ht. of Container(feet)" style="
+          width: 73%;
+          float: left;
+          ">
+          <p style="">feet</p>
+          <input type="number" id="chlengthinch" name="height_of_container_in" ng-model="data.height_of_container_in" placeholder="Ht. of Container(inch)" style="
+          width: 73%;
+          float: left;
+          ">
+          <p style="margin-top:22px">inch</p>
+        </label>
+      <button class="button button-positive upload-button" ng-click="uploadGAPics()">Upload Pics</button>
+    </div>
+    <p>Chassis</p>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <textarea ng-model="data.chassisDescription" placeholder=""></textarea>
+      </label>
+      <div class="item item-input">
+        Chassis Rating:
+        <ionic-ratings ratingsobj='chassisRatingObject'></ionic-ratings>
+      </div>
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI6}}" src="truckimg/slide6.png">
+            <img class="imageTwo" ng-click="takePicture6()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI7}}" src="truckimg/slide7.png">
+            <img class="imageTwo" ng-click="takePicture7()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI8}}" src="truckimg/slide8.png">
+            <img class="imageTwo" ng-click="takePicture8()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI9}}" src="truckimg/slide9.png">
+            <img class="imageTwo" ng-click="takePicture9()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadChassisPics()">Upload Pics</button>
+    <p>Cabin</p>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <textarea ng-model="data.cabinDescription" placeholder=""></textarea>
+      </label>
+      <div class="item item-input">
+       Cabin Rating:
+        <ionic-ratings ratingsobj='cabinRatingObject'></ionic-ratings>
+      </div>
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI10}}" src="truckimg/slide10.png">
+            <img class="imageTwo" ng-click="takePicture10()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI11}}" src="truckimg/slide11.png">
+            <img class="imageTwo" ng-click="takePicture11()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI12}}" src="truckimg/slide12.png">
+            <img class="imageTwo" ng-click="takePicture12()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadCabinPics()">Upload Pics</button>
+    <p>Engine</p>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <textarea ng-model="data.engineDescription" placeholder=""></textarea>
+      </label>
+      <div class="item item-input">
+        Engine Rating:
+        <ionic-ratings ratingsobj='engineRatingObject'></ionic-ratings>
+      </div>
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI13}}" src="truckimg/slide13.png">
+            <img class="imageTwo" ng-click="takePicture13()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadEnginePics()">Upload Pics</button>
+    <p>Transmission</p>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <textarea ng-model="data.transmissionDescription" id="transmission" name="transmission" placeholder=""></textarea>
+      </label>
+      <div class="item item-input">
+        Transmission Rating:
+        <ionic-ratings ratingsobj='transmissionRatingObject'></ionic-ratings>
+      </div>
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI14}}" src="truckimg/slide14.png">
+            <img class="imageTwo" ng-click="takePicture14()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadTransmissionPics()">Upload Pics</button>
+    <p>Tyres</p>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <textarea ng-model="data.tyresDescription" id="tyres" name="tyres" placeholder=""></textarea>
+      </label>
+      <div class="item item-input">
+        Tyres Rating:
+        <ionic-ratings ratingsobj="tyresRatingObject"></ionic-ratings>
+      </div>
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI19}}" src="truckimg/slide19.png">
+            <img class="imageTwo" ng-click="takePicture19()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI20}}" src="truckimg/slide20.png">
+            <img class="imageTwo" ng-click="takePicture20()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI21}}" src="truckimg/slide19.png">
+            <img class="imageTwo" ng-click="takePicture21()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI22}}" src="truckimg/slide20.png">
+            <img class="imageTwo" ng-click="takePicture22()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI23}}" src="truckimg/slide21.png">
+            <img class="imageTwo" ng-click="takePicture23()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI24}}" src="truckimg/slide22.png">
+            <img class="imageTwo" ng-click="takePicture24()" src="truckimg/icon-camera.png">
+          </div>F
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI25}}" src="truckimg/slide23.png">
+            <img class="imageTwo" ng-click="takePicture25()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgURI26}}" src="truckimg/slide24.png">
+            <img class="imageTwo" ng-click="takePicture26()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <button class="button button-positive upload-button" ng-click="uploadTyrePics()">Upload Pics</button>
+    </div>
+    <div class="padding">
+      <a class="button button-block button-positive" href="#/tab/truck/1">Next</a>
+    </div>
+  </ion-content>
+</ion-view>

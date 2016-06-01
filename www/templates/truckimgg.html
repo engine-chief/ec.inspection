@@ -1,0 +1,51 @@
+<ion-view view-title="Truck Inspection Details">
+  <ion-content class="padding" style="text-align:center;">
+    <p>Engine Video</p>
+    <div class="list">
+      <button class="button icon-left ion-videocamera button-positive" id="eVideo">Take Engine Video</button>
+      <div class="row" style="text-align:center;">
+        <div class="col col-100">
+          <div class="container">
+            <div id="videoArea1" style="border:1px solid;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+    .container {
+      position: relative;
+      width: 100%;
+      /*Or whatever you want*/
+    }
+    
+    .imageOne {
+      width: 100%;
+    }
+    
+    .imageTwo {
+      position: absolute;
+      width: 20%;
+      top: 78%;
+      left: 86%;
+      transform: translate(-50%, -50%);
+    }
+    </style>
+    <p>Drive Video</p>
+    <div class="list">
+      <button class="button icon-left ion-videocamera button-positive" id="dVideo">Take Drive Video</button>
+      <div class="row">
+        <div class="col col-100">
+          <div class="container" style>
+            <div id="videoArea2" style="border:1px solid;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Back Compression in Engine</p>
+    <ion-list style="text-align:left;">
+      <ion-radio ng-model="choice" ng-value="'A'">YES</ion-radio>
+      <ion-radio ng-model="choice" ng-value="'B'">NO</ion-radio>
+    </ion-list>
+    <button class="button button-block button-positive">Submit</button>
+  </ion-content>
+</ion-view>
