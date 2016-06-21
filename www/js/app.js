@@ -31,7 +31,7 @@ angular.module('ionicApp', ['ionic', 'ionicApp.controllers', 'ngCordova', 'ui.ro
   $stateProvider
 
   // setup an abstract state for the tabs directive
-  .state('tab', {
+    .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
@@ -39,6 +39,7 @@ angular.module('ionicApp', ['ionic', 'ionicApp.controllers', 'ngCordova', 'ui.ro
 
   // Each tab has its own nav history stack:
 
+  // login view
   .state('tab.login', {
     url: '/login',
     views: {
@@ -49,36 +50,115 @@ angular.module('ionicApp', ['ionic', 'ionicApp.controllers', 'ngCordova', 'ui.ro
     }
   })
 
-  .state('tab.client', {
-    url: '/client',
+  // search view
+  .state('tab.search', {
+    url: '/search',
     views: {
-      'tab-client': {
-        templateUrl: 'templates/tab-client.html',
-        controller: 'ClientCtrl'
+      'tab-search': {
+        templateUrl: 'templates/tab-search.html',
+        controller: 'SearchCtrl'
       }
     }
   })
 
   .state('tab.truck', {
     url: '/truck',
+    cache: 'false',
     views: {
-      'tab-truck': {
+      'tab-search': {
         templateUrl: 'templates/tab-truck.html',
         controller: 'TruckCtrl'
       }
     }
   })
-  
+
+  .state('tab.documents', {
+    url: '/truck/documents',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-documents.html',
+        controller: 'DocCtrl'
+      }
+    }
+  })
+
+  .state('tab.ga', {
+    url: '/truck/ga',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-general-appearance.html',
+        controller: 'GACtrl'
+      }
+    }
+  })
+
+  .state('tab.chassis', {
+    url: '/truck/chassis',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-chassis.html',
+        controller: 'ChassisCtrl'
+      }
+    }
+  })
+
+  .state('tab.engine', {
+    url: '/truck/engine',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-engine.html',
+        controller: 'EngineCtrl'
+      }
+    }
+  })
+
+  .state('tab.cabin', {
+    url: '/truck/cabin',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-cabin.html',
+        controller: 'CabinCtrl'
+      }
+    }
+  })
+
+  .state('tab.tyres', {
+    url: '/truck/tyres',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-tyres.html',
+        controller: 'TyresCtrl'
+      }
+    }
+  })
+
+  .state('tab.final', {
+    url: '/truck/final',
+    cache: 'false',
+    views: {
+      'tab-search': {
+        templateUrl: 'templates/section-final.html',
+        controller: 'FinalCtrl'
+      }
+    }
+  })
+
   .state('tab.truckimg', {
     url: '/truck/0',
     views: {
-      'tab-truck': {
+      'tab-search': {
         templateUrl: 'templates/truckimg.html',
         controller: 'TruckImgCtrl'
       }
     }
   })
-  
+
   .state('tab.truckimgg', {
     url: '/truck/1',
     views: {
@@ -88,10 +168,9 @@ angular.module('ionicApp', ['ionic', 'ionicApp.controllers', 'ngCordova', 'ui.ro
       }
     }
   });
-  
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/login');
 
 });
-

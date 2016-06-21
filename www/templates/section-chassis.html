@@ -1,0 +1,429 @@
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+</style>
+<ion-view view-title="Chassis Section">
+  <ion-content class="padding">
+    <p>Chassis</p>
+    <div class="list">
+      <div class="item item-input">
+        Chassis Rating:
+        <ionic-ratings ratingsobj='chassisRatingObject'></ionic-ratings>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis1}}" src="truckimg/chassis/Front Axle.png">
+            <img class="imageTwo" ng-click="takePictureChassis1()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis2}}" src="truckimg/chassis/Leaf Spring Front Left.png">
+            <img class="imageTwo" ng-click="takePictureChassis2()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Front Axle</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Leaf Spring Front Left</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis3}}" src="truckimg/chassis/Air Brake and Pipe Front Left.png">
+            <img class="imageTwo" ng-click="takePictureChassis3()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis4}}" src="truckimg/chassis/Left wheel hydraulic system.png">
+            <img class="imageTwo" ng-click="takePictureChassis4()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Air Brake and Pipe Front Left</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Left wheel hydraulic system</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis5}}" src="truckimg/chassis/Left Hydraulic wheel air brake and pipe.png">
+            <img class="imageTwo" ng-click="takePictureChassis5()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis6}}" src="truckimg/chassis/Gear Box.png">
+            <img class="imageTwo" ng-click="takePictureChassis6()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Left Hydraulic wheel air brake and pipe</b>
+          </p>
+        </div>
+        <div class="caption col col-50">
+          <p>Gear Box</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis7}}" src="truckimg/chassis/Shaft.png">
+            <img class="imageTwo" ng-click="takePictureChassis7()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgChassis8}}" src="truckimg/chassis/Differential.png">
+            <img class="imageTwo" ng-click="takePictureChassis8()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Shaft</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Differential</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis9}}" src="truckimg/chassis/Rear Axle(Power).png">
+          <img class="imageTwo" ng-click="takePictureChassis9()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis10}}" src="truckimg/chassis/Leaf Spring Right Tyre(Power).png">
+          <img class="imageTwo" ng-click="takePictureChassis10()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="caption col col-50">
+        <p>Rear Axle(Power)</p>
+      </div>
+      <div class="caption col col-50">
+        <p>Leaf Spring Right Tyre(Power)</p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis11}}" src="truckimg/chassis/Leaf Spring Right Tyre.png">
+          <img class="imageTwo" ng-click="takePictureChassis11()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis12}}" src="truckimg/chassis/Rear Axle.png">
+          <img class="imageTwo" ng-click="takePictureChassis12()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="caption col col-50">
+        <p>Leaf Spring Right Tyre</p>
+      </div>
+      <div class="caption col col-50">
+        <p>Rear Axle</p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis13}}" src="truckimg/chassis/Leaf Spring Left Tyre(Power).png">
+          <img class="imageTwo" ng-click="takePictureChassis13()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis14}}" src="truckimg/chassis/Leaf Spring Left Tyre.png">
+          <img class="imageTwo" ng-click="takePictureChassis14()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="caption col col-50">
+        <p>Leaf Spring Left Tyre(Power)</p>
+      </div>
+      <div class="caption col col-50">
+        <p>Leaf Spring Left Tyre</p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis15}}" src="truckimg/chassis/Right wheel hydraulic system.png">
+          <img class="imageTwo" ng-click="takePictureChassis15()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis16}}" src="truckimg/chassis/Right Hydraulic wheel air brake and pipe.png">
+          <img class="imageTwo" ng-click="takePictureChassis16()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="caption col col-50">
+        <p>Right wheel hydraulic system</p>
+      </div>
+      <div class="caption col col-50">
+        <p>Right Hydraulic wheel air brake and pipe</p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis17}}" src="truckimg/chassis/Leaf Spring Front Right.png">
+          <img class="imageTwo" ng-click="takePictureChassis17()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis18}}" src="truckimg/chassis/Air Brake and Pipe Front Right.png">
+          <img class="imageTwo" ng-click="takePictureChassis18()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="caption col col-50">
+        <p>Leaf Spring Front Right</p>
+      </div>
+      <div class="caption col col-50">
+        <p>Air Brake and Pipe Front Right</p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis19}}" src="truckimg/chassis/Steering Box.png">
+          <img class="imageTwo" ng-click="takePictureChassis19()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="container" style>
+          <img class="imageOne" ng-src="{{imgChassis20}}" src="truckimg/chassis/Drag Link.png">
+          <img class="imageTwo" ng-click="takePictureChassis20()" src="truckimg/icon-camera.png">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="caption col col-50">
+        <p>Steering Box</p>
+      </div>
+      <div class="caption col col-50">
+        <p>Drag Link</p>
+      </div>
+    </div>
+    <div class="item usage-guide-container">
+      <h2 class="usage-guide-heading"><b><u>Usage Guide</u></b></h2>
+      <div>
+        <div>
+          <p class="usage-guide-text">Missing/Loose</p>
+          <label class="toggle guide">
+            <input class="user-guide-toggle" type="checkbox" onclick="return false">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+        <hr>
+        <div>
+          <p class="usage-guide-text">Intact</p>
+          <label class="toggle guide">
+            <input class="user-guide-toggle" type="checkbox" ng-checked="true" onclick="return false">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="item item-toggle">Front axle
+      <label class="toggle">
+        <input ng-model="data.has_front_axle_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Leaf spring front left
+      <label class="toggle">
+        <input ng-model="data.has_leaf_spring_front_left_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Air brake and pipe front left
+      <label class="toggle">
+        <input ng-model="data.has_air_brake_and_pipe_front_left_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Left wheel hydraulic system
+      <label class="toggle">
+        <input ng-model="data.has_left_wheel_hydraulic_system_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Left hydraulic wheel air brake and pipe
+      <label class="toggle">
+        <input ng-model="data.has_left_hydraulic_wheel_air_brake_and_pipe_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Gear box
+      <label class="toggle">
+        <input ng-model="data.has_gear_box_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Shaft
+      <label class="toggle">
+        <input ng-model="data.has_shaft_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Differential
+      <label class="toggle">
+        <input ng-model="data.has_differential_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Rear axle (power)
+      <label class="toggle">
+        <input ng-model="data.has_rear_axle_power_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Leaf spring right tyre (power)
+      <label class="toggle">
+        <input ng-model="data.has_leaf_spring_right_tyre_power_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Leaf spring right tyre
+      <label class="toggle">
+        <input ng-model="data.has_leaf_spring_right_tyre_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Rear axle
+      <label class="toggle">
+        <input ng-model="data.has_rear_axle_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Leaf spring left tyre (power)
+      <label class="toggle">
+        <input ng-model="data.has_leaf_spring_left_tyre_power_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Leaf spring left tyre
+      <label class="toggle">
+        <input ng-model="data.has_leaf_spring_left_tyre_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Right wheel hydraulic system
+      <label class="toggle">
+        <input ng-model="data.has_right_wheel_hydraulic_system_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Right hydraulic wheel air brake and pipe
+      <label class="toggle">
+        <input ng-model="data.has_right_hydraulic_wheel_air_brake_and_pipe_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Leaf spring front right
+      <label class="toggle">
+        <input ng-model="data.has_leaf_spring_front_right_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Air brake and pipe front right
+      <label class="toggle">
+        <input ng-model="data.has_air_brake_and_pipe_front_right_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Steering box
+      <label class="toggle">
+        <input ng-model="data.has_steering_box_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    <div class="item item-toggle">Drag link
+      <label class="toggle">
+        <input ng-model="data.has_drag_link_intact" type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadChassisPics()">Upload Pics</button>
+  </ion-content>
+</ion-view>

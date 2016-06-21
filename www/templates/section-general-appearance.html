@@ -1,0 +1,199 @@
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.measurements {
+  width: 73%;
+  float: left;
+}
+</style>
+<ion-view view-title="General Appearance Section">
+  <ion-content class="padding">
+    <p>General Apperances</p>
+    <div class="list">
+      <div class="item item-input">
+        General Appearance Rating:
+        <ionic-ratings name="naman" ratingsobj='gaRatingObject'></ionic-ratings>
+      </div>
+      <div class="list">
+        <div class="row">
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa1}}" src="truckimg/ga/FrontAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa1()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa2}}" src="truckimg/ga/LeftWideAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa2()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="caption col col-50">
+            <p>Front Angle <b>(Potrait)</b></p>
+          </div>
+          <div class="caption col col-50">
+            <p>Left Wide Angle</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa3}}" src="truckimg/ga/LeftCloseAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa3()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa4}}" src="truckimg/ga/BackLeftAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa4()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="caption col col-50">
+            <p>Left Close Angle</p>
+          </div>
+          <div class="caption col col-50">
+            <p>Back Left Angle</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa5}}" src="truckimg/ga/BackAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa5()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa6}}" src="truckimg/ga/BackRightAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa6()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="caption col col-50">
+            <p>Back Angle <b>(Potrait)</b></p>
+          </div>
+          <div class="caption col col-50">
+            <p>Back Right Angle</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa7}}" src="truckimg/ga/RightCloseAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa7()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+          <div class="col col-50">
+            <div class="container" style>
+              <img class="imageOne" ng-src="{{imgGa8}}" src="truckimg/ga/RightWideAngle.png">
+              <img class="imageTwo" ng-click="takePictureGa8()" src="truckimg/icon-camera.png">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="caption col col-50">
+            <p>Right Close Angle</p>
+          </div>
+          <div class="caption col col-50">
+            <p>Right Wide Angle</p>
+          </div>
+        </div>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Current length of chassis</span>
+          <input class="measurements" type="number" name="original_length_of_chassis_ft" ng-model="data.original_length_of_chassis_ft" placeholder="Current length of chassis (feet)">
+          <input class="measurements" type="number" name="original_length_of_chassis_in" ng-model="data.original_length_of_chassis_in" placeholder="Current length of chassis (inch)">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Manufacturing length of Chassis (if different)</span>
+          <input class="measurements" type="number" name="manufacturing_length_of_chassis_ft" ng-model="data.manufacturing_length_of_chassis_ft" placeholder="Manufacturing length of Chassis (feet)">
+          <input class="measurements" type="number" name="manufacturing_length_of_chassis_in" ng-model="data.manufacturing_length_of_chassis_in" placeholder="Manufacturing length of Chassis (inch)">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Overall Height</span>
+          <input class="measurements" type="number" id="overallheight" name="overall_height_ft" ng-model="data.overall_height_ft" placeholder="Overall Height (feet)">
+          <input class="measurements" type="number" id="chlengthinch" name="overall_height_in" ng-model="data.overall_height_in" placeholder="Overall Height (inch)">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Overall Length</span>
+          <input class="measurements" type="number" id="chlengthinch" name="overall_length_ft" ng-model="data.overall_length_ft" placeholder="Overall Length (feet)">
+          <input class="measurements" type="number" id="chlengthinch" name="overall_length_in" ng-model="data.overall_length_in" placeholder="Overall Length (inch)">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Overall Width</span>
+          <input class="measurements" type="number" id="overallwidth" name="overall_width_ft" ng-model="data.overall_width_ft" placeholder="Overall Width (feet)">
+          <input class="measurements" type="number" id="chlengthinch" name="overall_width_in" ng-model="data.overall_width_in" placeholder="Overall Width (inch)">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Height of Container / Body</span>
+          <input class="measurements" type="number" id="heightcon" name="height_of_container_ft" ng-model="data.height_of_container_ft" placeholder="Height of Container (feet)">
+          <input class="measurements" type="number" id="chlengthinch" name="height_of_container_in" ng-model="data.height_of_container_in" placeholder="Height of Container (inch)">
+        </label>
+        <div class="item item-input">
+          Paint Finish Rating:
+          <ionic-ratings ratingsobj='pfRatingObject'></ionic-ratings>
+        </div>
+        <div class="item item-input">
+          Side Sheet Metal Rating:
+          <ionic-ratings ratingsobj='sdmRatingObject'></ionic-ratings>
+        </div>
+        <div class="item item-input">
+          Floor Condition Rating:
+          <ionic-ratings ratingsobj='fcRatingObject'></ionic-ratings>
+        </div>
+        <div class="item item-input">
+          Glass Condition Rating:
+          <ionic-ratings ratingsobj='gcRatingObject'></ionic-ratings>
+        </div>
+        <div class="item usage-guide-container">
+          <h2 class="usage-guide-heading"><b><u>Usage Guide</u></b></h2>
+          <div>
+            <div>
+              <p class="usage-guide-text">Not Working</p>
+              <label class="toggle guide">
+                <input class="user-guide-toggle" type="checkbox" onclick="return false">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>
+            <hr>
+            <div>
+              <p class="usage-guide-text">Working</p>
+              <label class="toggle guide">
+                <input class="user-guide-toggle" type="checkbox" ng-checked="true" onclick="return false">
+                <div class="track">
+                  <div class="handle"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="item item-toggle">Head lights
+          <label class="toggle">
+            <input ng-model="data.are_head_lights_working" type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+        <div class="item item-toggle">Indicators
+          <label class="toggle">
+            <input name="hi" ng-model="data.are_indicators_working" type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+        <button class="button button-positive upload-button" ng-click="uploadGAPics()">Upload Pics</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

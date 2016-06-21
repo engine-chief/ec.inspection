@@ -1,0 +1,35 @@
+<style>
+h3 {
+  padding-bottom: 1px;
+}
+</style>
+
+<ion-view view-title="Truck To Inspect">
+  <ion-content class="padding">
+    <p>Search Your Truck</p>
+    <!-- <div style="margin-bottom:10px">
+      <a ng-click="fetchAllTrucks()" class="ion-android-download" style="font-size: 25px; margin-top: 5px; text-decoration:none">
+        <span style="font-size: 20px;">Fetch all trucks</span></a>
+    </div> -->
+    <div id="search-bar">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper" id="search-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input id="searchText" type="text" placeholder="Search" ng-model="query" ng-change="search()">
+        </label>
+      </div>
+    </div>
+    <div class="list">
+      <div class="item item-thumbnail-left" ng-repeat="truck in trucks">
+        <img ng-src="{{truck.ga_1}}" data-pin-nopin="true">
+        <a ng-click="loadTruck(truck)"><h2>{{truck.variant}}</h2></a>
+        <h2>{{truck.bodytype}}</h2>
+        <h2>{{truck.manufacturing_month_and_year}}</h2>
+        <h2>{{truck.truck_passing}} {{truck.truck_number}}</h2>
+        </p>
+        <div class="pull-right">
+          <h3 class="status">{{truck.status_id == 2 ? "Ready for Inspection" : "Rejected"}}</h3></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,136 @@
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+</style>
+<ion-view view-title="Engine Section">
+  <ion-content class="padding">
+    <p>Engine</p>
+    <div class="list">
+      <div class="item item-input">
+        Engine Rating:
+        <ionic-ratings ratingsobj='engineRatingObject'></ionic-ratings>
+      </div>
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgEngine1}}" src="truckimg/engine/Engine Head.png">
+            <img class="imageTwo" ng-click="takePictureEngine1()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgEngine2}}" src="truckimg/engine/Radiator.png">
+            <img class="imageTwo" ng-click="takePictureEngine2()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Engine Head</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Radiator</p>
+        </div>
+      </div>
+      <div class="item usage-guide-container">
+      <h2 class="usage-guide-heading"><b><u>Usage Guide</u></b></h2>
+      <div>
+        <div>
+          <p class="usage-guide-text">Not Working/Missing/Loose/Not Visible</p>
+          <label class="toggle guide">
+            <input class="user-guide-toggle" type="checkbox" onclick="return false">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+        <hr>
+        <div>
+          <p class="usage-guide-text">Working/Intact/Visible</p>
+          <label class="toggle guide">
+            <input class="user-guide-toggle" type="checkbox" ng-checked="true" onclick="return false">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+      <div class="item item-toggle">Starter
+        <label class="toggle">
+          <input ng-model="data.is_starter_working" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Air compressor
+        <label class="toggle">
+          <input ng-model="data.is_air_compressor_working" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Fuel system
+        <label class="toggle">
+          <input ng-model="data.is_fuel_system_working" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Exhaust system
+        <label class="toggle">
+          <input ng-model="data.is_exhaust_system_intact" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Radiator
+        <label class="toggle">
+          <input ng-model="data.is_radiator_intact" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Fuel leaks
+        <label class="toggle">
+          <input ng-model="data.are_fuel_leaks_visible" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Oil leaks
+        <label class="toggle">
+          <input ng-model="data.are_oil_leaks_visible" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Cooling system leaks
+        <label class="toggle">
+          <input ng-model="data.are_cooling_system_leaks_visible" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Blow back
+        <label class="toggle">
+          <input ng-model="data.is_blow_back_visible" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadEnginePics()">Upload Pics</button>
+  </ion-content>
+</ion-view>

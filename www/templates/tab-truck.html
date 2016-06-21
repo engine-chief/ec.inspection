@@ -1,8 +1,8 @@
-<ion-view view-title="Truck Inspection Details">
+<ion-view view-title="Truck Inspection Details" cache-view="false">
   <ion-content class="padding">
     <form name="truckForm" novalidate="" ng-submit="truck()">
       <div class="list">
-        <div class="errors" style="margin:10px; color:red">
+        <div class="errors" style="margin:10px; color:red; font-size:15px">
           {{errors}}
         </div>
         <label class="item item-input item-select">
@@ -38,15 +38,17 @@
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Truck Passing</span>
-          <input type="text" id="tpass" name="truck_passing" ng-model="data.truck_passing" placeholder="DL 3C N">
+          <input class="text-uppercase" type="text" id="tpass" name="truck_passing" ng-model="data.truck_passing" placeholder="DL 3C" ng-pattern="truck_passing_regex">
+          <div class="errors" ng-show="truckForm.truck_passing.$invalid">Incorrect Format</div>
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Truck Number</span>
-          <input type="text" id="truck_number" name="truck_number" ng-model="data.truck_number" placeholder="7132">
+          <input class="text-uppercase" type="text" id="truck_number" name="truck_number" ng-model="data.truck_number" placeholder="N 7132" ng-pattern="truck_number_regex">
+          <div class="errors" ng-show="truckForm.truck_number.$invalid">Incorrect Format</div>
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Part A and Part B Permit Date</span>
-          <input type="date" id="permitDate" name="permit_date" ng-model="data.permit_date" placeholder="DD/MM/YY">
+          <input type="date" id="permitDate" name="local_permit_date" ng-model="data.local_permit_date" placeholder="DD/MM/YY">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Date of Registration</span>
@@ -60,17 +62,16 @@
           <div class="input-label">
             Type
           </div>
-          <select ng-model="data.bodytype" name="bodytype">
-            <option value="Openbody - Full">Open Body - Full Body</option>
-            <option value="Openbody - Half">Open Body - Half body</option>
-            <option value="Container - Normal">Container - Normal</option>
-            <option value="Container - Scooter">Container - Scooter body</option>
-            <option value="Container - Vehicle">Container - Vehicle Carrier</option>
-            <option value="Tanker">Tanker</option>
-            <option value="Low Platform Trailer">Low Platform Trailer</option>
-            <option value="Only Horse">Only horse</option>
-            <option value="Articulated Vehicles (2+ axles)">Articulated Vehicles (2+ axles)</option>
+          <select ng-model="data.bodytype" name="bodytype" ng-options="bd.name for bd in bodytypes">
           </select>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Capacity (only Tankers)</span>
+          <input type="number" id="capacity" name="capacity" ng-model="data.capacity" placeholder="In Kl">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Number of valves (only Tankers)</span>
+          <input type="number" id="no_of_valves" name="no_of_valves" ng-model="data.no_of_valves" placeholder="5">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Insurance Valid Till</span>
@@ -81,15 +82,15 @@
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Insurance declared value</span>
-          <input type="text" id="insdeclared" name="insurance_declared_value" ng-model="data.insurance_declared_value" placeholder="XXX">
+          <input type="number" id="insdeclared" name="insurance_declared_value" ng-model="data.insurance_declared_value" placeholder="XXX">
         </label>
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Value Of Insurance Premium</span>
-          <input type="text" id="insurancevalue" name="insurance_premium" ng-model="data.insurance_premium" placeholder="Value Of Insurance Premium">
+          <span class="input-label">Value Of Insurance Premium (INR)</span>
+          <input type="number" id="insurancevalue" name="insurance_premium" ng-model="data.insurance_premium" placeholder="3500">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">National Permit Valid Till</span>
-          <input type="date" id="permittill" name="national_permit_valid_till" ng-model="data.national_permit_valid_till" placeholder="National Permit Valid Till">
+          <input type="date" id="permit" name="national_permit_valid_till" ng-model="data.national_permit_valid_till" placeholder="National Permit Valid Till">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">Fitness Valid Till</span>

@@ -1,0 +1,59 @@
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+</style>
+
+<ion-view view-title="Documents Section">
+  <ion-content class="padding">
+    <p>Documents</p>
+    <div class="list">
+      <div class="row" style="text-align:center;">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgRc}}" src="truckimg/docs/rc.png">
+            <img class="imageTwo" ng-click="takePictureRc()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgPermit}}" src="truckimg/docs/permit.png">
+            <img class="imageTwo" ng-click="takePicturePermit()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>RC</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Permit</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgInsurance}}" src="truckimg/docs/insurance.png">
+            <img class="imageTwo" ng-click="takePictureInsurance()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgFitness}}" src="truckimg/docs/fitness.png">
+            <img class="imageTwo" ng-click="takePictureFitness()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Insurance</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Fitness</p>
+        </div>
+      </div>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadDocumentPics()">Next</button>
+  </ion-content>
+</ion-view>

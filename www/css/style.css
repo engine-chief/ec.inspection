@@ -1,1 +1,72 @@
 /* Empty. Add your own CSS if you like */
+
+.errors {
+  color: red;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  /*Or whatever you want*/
+}
+
+.imageOne {
+  width: 100%;
+}
+
+.imageTwo {
+  position: absolute;
+  width: 20%;
+  top: 78%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+}
+
+.upload-button {
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.ionic_ratings {
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.ionic_ratings .icon {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.caption {
+  margin-left: 15px;
+}
+
+.toggle input:checked + .track {
+  background-color: #4CD964;
+  border-color: #4CD964;
+}
+
+.toggle .track {
+  background-color: #EF473A;
+  border-color: #EF473A;
+}
+
+.usage-guide-container {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.usage-guide-heading {
+  font-size: 22px;
+}
+
+.usage-guide-text {
+  display: inline-block;
+}
+
+.toggle.guide {
+  float:right;
+  display: inline-block;
+}

@@ -1,0 +1,196 @@
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+</style>
+<ion-view view-title="Cabin Section">
+  <ion-content class="padding">
+    <p>Cabin</p>
+    <div class="list">
+      <div class="item item-input">
+        Cabin Rating:
+        <ionic-ratings ratingsobj='cabinRatingObject'></ionic-ratings>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin1}}" src="truckimg/cabin/Main Panel.png">
+            <img class="imageTwo" ng-click="takePictureCabin1()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin2}}" src="truckimg/cabin/Warning lights.png">
+            <img class="imageTwo" ng-click="takePictureCabin2()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Main Panel</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Warning lights</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin3}}" src="truckimg/cabin/Odometer.png">
+            <img class="imageTwo" ng-click="takePictureCabin3()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin4}}" src="truckimg/cabin/Instrument Panel.png">
+            <img class="imageTwo" ng-click="takePictureCabin4()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Odometer</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Instrument Panel</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin5}}" src="truckimg/cabin/Park Brake.png">
+            <img class="imageTwo" ng-click="takePictureCabin5()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin6}}" src="truckimg/cabin/Accelerator brake and clutch1.png">
+            <img class="imageTwo" ng-click="takePictureCabin6()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Park Brake</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Accelerator and Brake</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin7}}" src="truckimg/cabin/Accelerator brake and clutch2.png">
+            <img class="imageTwo" ng-click="takePictureCabin7()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin8}}" src="truckimg/cabin/Seating1.png">
+            <img class="imageTwo" ng-click="takePictureCabin8()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Clutch</p>
+        </div>
+        <div class="caption col col-50">
+          <p>Seating 1</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-50">
+          <div class="container" style>
+            <img class="imageOne" ng-src="{{imgCabin9}}" src="truckimg/cabin/Seating2.png">
+            <img class="imageTwo" ng-click="takePictureCabin9()" src="truckimg/icon-camera.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="caption col col-50">
+          <p>Seating 2</p>
+        </div>
+      </div>
+      <div class="item usage-guide-container">
+        <h2 class="usage-guide-heading"><b><u>Usage Guide</u></b></h2>
+        <div>
+          <div>
+            <p class="usage-guide-text">Not Working/Missing/Loose</p>
+            <label class="toggle guide">
+              <input class="user-guide-toggle" type="checkbox" onclick="return false">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </div>
+          <hr>
+          <div>
+            <p class="usage-guide-text">Working/Intact</p>
+            <label class="toggle guide">
+              <input class="user-guide-toggle" type="checkbox" ng-checked="true" onclick="return false">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="item item-toggle">Main panel
+        <label class="toggle">
+          <input ng-model="data.is_main_panel_intact" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Instrument panel
+        <label class="toggle">
+          <input ng-model="data.is_instrument_panel_intact" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Accelerator, brake and clutch
+        <label class="toggle">
+          <input ng-model="data.is_accelerator_brake_and_clutch_intact" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Warning lights
+        <label class="toggle">
+          <input ng-model="data.are_warning_lights_working" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Odometer
+        <label class="toggle">
+          <input ng-model="data.is_odometer_working" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle">Park brake
+        <label class="toggle">
+          <input ng-model="data.is_park_brake_working" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <label class="item item-input item-stacked-label">
+          <span class="input-label">Kilometers Driven</span>
+          <input type="number" id="km_driven" name="km_driven" ng-model="data.km_driven" placeholder="65000">
+        </label>
+    </div>
+    <button class="button button-positive upload-button" ng-click="uploadCabinPics()">Upload Pics</button>
+  </ion-content>
+</ion-view>
